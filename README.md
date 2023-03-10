@@ -15,6 +15,6 @@ RFM analysis is a technique used to categorize customers according to their purc
 #### Our Task:
 Problem/ Requirement: Use RFM & Machine Learning algorithms in Python for Customers segmentation.
 
-In this project, we have applied RFM & KMeans algorithms (with PCA) to cluster customers from file CDNOW_master.txt (http://brucehardie.com/notes/026/).
+In this project, I have applied RFM & KMeans algorithms (with PCA) to cluster customers from file dataset CDNOW_master.txt (http://brucehardie.com/notes/026/).
 
 *(I run some models: Kmeans, Kmeans with PCA, Hierarchical, Hierarchical with PCA, RFM manual (base on my domain knowledge) AND Kmeans with PCA is the best model in my case.)*
