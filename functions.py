@@ -65,7 +65,7 @@ def create_RFM(df):
     return new_df
 
 #Scaling data
-#@st.cache_data(max_entries=1000)
+@st.cache_data(max_entries=1000)
 def preprocess(df):
     df_log = np.log1p(df)
     scaler = StandardScaler()
@@ -74,7 +74,7 @@ def preprocess(df):
     return norm
 
 #PCA
-#@st.cache_data(max_entries=1000)
+@st.cache_data(max_entries=1000)
 def PCA_model(df):
     pca = PCA(n_components=3)
     principalComponents = pca.fit_transform(df)
@@ -82,7 +82,7 @@ def PCA_model(df):
     return PCA_components
 
 #Calculate average RFM values and size for each cluster:
-#@st.cache_data(max_entries=1000)
+@st.cache_data(max_entries=1000)
 def Label_model(new_df,_model):
     rfm_rfm = new_df.assign(K_Cluster = _model.labels_)
     rfm_rfm["Segment"]=rfm_rfm['K_Cluster'].map(lambda x:"Loyal" if x ==1
@@ -90,7 +90,7 @@ def Label_model(new_df,_model):
                                               else "Hibernating")
     return rfm_rfm
 
-#@st.cache_data(max_entries=1000)
+@st.cache_data(max_entries=1000)
 def average_RFM(rfm_rfm):
     rfm_agg2 = rfm_rfm.groupby('Segment').agg({
         'Recency': 'mean',
