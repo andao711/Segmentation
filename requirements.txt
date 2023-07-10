@@ -1,6 +1,6 @@
 streamlit
 numpy
-pandas==2.0.2
+pandas==2.0.0
 scikit-learn
 plotly
 dill
