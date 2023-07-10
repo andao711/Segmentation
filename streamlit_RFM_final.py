@@ -60,7 +60,7 @@ def load_html(file):
     return components.html(source_code,height = 400)
 
 # Load dill
-@st.cache_resource
+#@st.cache_resource
 def load_dill(pkl_filename):
     with open(pkl_filename, 'rb') as file:  
         model = dill.load(file)
