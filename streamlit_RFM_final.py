@@ -177,7 +177,7 @@ elif choice == 'New Prediction':
                 st.write("Please upload file!☕️ ")
             else:
                 new_df2=upload_file(uploaded_file_1,uploaded_file_2)
-                new_df3=new_df2._append(new_df1)
+                new_df3=pd.concat([new_df2, pd.DataFrame([new_df1)], ignore_index=True)
                 lines = preprocess(new_df3)
                 PCA_components = PCA_model(lines)
                 lines=PCA_components.iloc[:,:1]
@@ -200,7 +200,7 @@ elif choice == 'New Prediction':
                                        'Frequency': [Frequency],
                                        'Monetary': [Monetary]})
                 new_df2=new_df1.copy()
-                new_df2=new_df2._append(data_input)
+                new_df2=pd.concat([new_df2, pd.DataFrame([data_input])], ignore_index=True)
                 lines = preprocess(new_df2)
                 PCA_components = PCA_model(lines)
                 lines=PCA_components.iloc[:,:1]
