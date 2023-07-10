@@ -65,7 +65,7 @@ def create_RFM(df):
     return new_df
 
 #Scaling data
-#@st.cache_data(max_entries=1000)
+@st.cache_data(max_entries=1000)
 def preprocess(df):
     df_log = np.log1p(df)
     scaler = StandardScaler()
