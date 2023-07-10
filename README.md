@@ -1,5 +1,5 @@
 # Streamlit app:
-link: https://andao711-segmentation-streamlit-rfm-final-dm5jtr.streamlit.app/
+link: [https://andao711-segmentation-streamlit-rfm-final-dm5jtr.streamlit.app/](https://segmentation-bqq3vbhj0y.streamlit.app/)
 # Introduce
 ![RFM](images/2.png)
 An e-commerce company wants to segment its customers and determine marketing strategies according to these segments. For example, it is desirable to organize different campaigns to retain customers who are very profitable for the company, and different campaigns for new customers.
