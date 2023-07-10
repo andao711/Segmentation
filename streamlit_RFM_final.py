@@ -177,7 +177,7 @@ elif choice == 'New Prediction':
                 st.write("Please upload file!☕️ ")
             else:
                 new_df2=upload_file(uploaded_file_1,uploaded_file_2)
-                new_df3=pd.concat([new_df2, pd.DataFrame([new_df1)], ignore_index=True)
+                new_df3=pd.concat([new_df2, pd.DataFrame([new_df1])], ignore_index=True)
                 lines = preprocess(new_df3)
                 PCA_components = PCA_model(lines)
                 lines=PCA_components.iloc[:,:1]
